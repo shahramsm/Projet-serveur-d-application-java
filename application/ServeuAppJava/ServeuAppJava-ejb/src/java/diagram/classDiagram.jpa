@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="entity" v="2.6.3" sm="false" xs="false" id="_15796142026621" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:description>offre
+</jpa:description>
+    <jpa:entity xre="false" compositePrimaryKeyClass="UtilisateurPK" abs="false" class="Utilisateur" visibile="true" minimized="false" rootElement="_15796142026621" id="_1579614249078">
+        <jpa:ts e="true"/>
+        <jpa:hc e="true"/>
+        <jpa:eq e="true"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="nom" id="_157961500346268">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="prenom" id="_157961500392469">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="login" id="_157961500415070">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="mdp" id="_157961500436771">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="email" id="_157961500457672">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="adresse" id="_157961500478173">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="tel" id="_157961500500874">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="description" id="_157961500549275">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="boolean" visibile="true" name="estAdmin" id="_1579615181057138">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="dateNaissance" id="_1579615525797139">
+                <jpa:bv/>
+                <jpa:temporal>DATE</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="sexe" id="_1579615526634141">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:one-to-many orp="false" collection-type="java.util.List" connected-entity-id="_1579614407345" connected-attribute-id="_158194662559911" visibile="true" name="demandes" id="_158194662560212"/>
+            <jpa:one-to-many orp="false" collection-type="java.util.List" connected-entity-id="_1579614407345" connected-attribute-id="_158194666143313" visibile="true" name="offres" id="_158194666143414"/>
+            <jpa:one-to-many orp="false" collection-type="java.util.List" connected-entity-id="_1581946711719" connected-attribute-id="_1582203819884160" visibile="true" name="notifcationRecep" id="_1582203819884161"/>
+            <jpa:id attribute-type="Long" visibile="true" name="codeUtilisateur" id="_15796142491152">
+                <jpa:bv/>
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Utilisateur.findAll">
+            <jpa:query>Select e from Utilisateur e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByNom">
+            <jpa:query>Select u from Utilisateur u where u.nom=:nom</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByPrenom">
+            <jpa:query>Select u from Utilisateur u where u.prenom=:prenom</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByLogin">
+            <jpa:query>Select u from Utilisateur u where u.login=:login</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByMdp">
+            <jpa:query>Select u from Utilisateur u where u.mdp=:mdp</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByEmail">
+            <jpa:query>Select u from Utilisateur u where u.email=:email</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByAdresse">
+            <jpa:query>Select u from Utilisateur u where u.adresse=:adresse</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByTel">
+            <jpa:query>Select u from Utilisateur u where u.tel=:tel</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByDescription">
+            <jpa:query>Select u from Utilisateur u where u.description=:description</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByEstAdmin">
+            <jpa:query>Select u from Utilisateur u where u.estAdmin=:estAdmin</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByDateNaissance">
+            <jpa:query>Select u from Utilisateur u where u.dateNaissance=:dateNaissance</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByPhoto">
+            <jpa:query>Select u from Utilisateur u where u.photo=:photo</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findBySexe">
+            <jpa:query>Select u from Utilisateur u where u.sexe=:sexe</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="ServicePK" abs="false" class="Service" visibile="true" minimized="false" rootElement="_15796142026621" id="_1579614407345">
+        <jpa:ts e="true"/>
+        <jpa:hc e="true"/>
+        <jpa:eq e="true"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="typeService" id="_1579615609349142">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="dateDebut" id="_1579615610373144">
+                <jpa:bv/>
+                <jpa:temporal>DATE</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="dateFin" id="_1579615611003145">
+                <jpa:bv/>
+                <jpa:temporal>DATE</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="courteDescription" id="_1579615611201146">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="longueDescription" id="_1579615611427147">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="localisation" id="_1579615730077148">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="etat" id="_1579620802196215">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="offreService" id="_158204918687871">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1579614249078" connected-attribute-id="_158194662560212" visibile="true" name="demandeUser" id="_158194662559911"/>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1579614249078" connected-attribute-id="_158194666143414" visibile="true" name="offreUser" id="_158194666143313"/>
+            <jpa:one-to-many orp="false" collection-type="java.util.List" connected-entity-id="_1581946711719" connected-attribute-id="_1582482627141178" visibile="true" name="notifications" id="_1582482627141179"/>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1580156245090" visibile="true" name="natureService" id="_158015647500039"/>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_157961440734566">
+                <jpa:bv/>
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Service.findAll">
+            <jpa:query>Select e from Service e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Service.findByTypeService">
+            <jpa:query>Select s from Service s where s.typeService=:typeService</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Service.findByNatureService">
+            <jpa:query>Select s from Service s where s.natureService=:natureService</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Service.findByDateDebut">
+            <jpa:query>Select s from Service s where s.dateDebut=:dateDebut</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Service.findByDateFin">
+            <jpa:query>Select s from Service s where s.dateFin=:dateFin</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Service.findByCourteDescription">
+            <jpa:query>Select s from Service s where s.courteDescription=:courteDescription</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Service.findByLongueDescription">
+            <jpa:query>Select s from Service s where s.longueDescription=:longueDescription</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Service.findByLocalisation">
+            <jpa:query>Select s from Service s where s.localisation=:localisation</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Service.findByEtat">
+            <jpa:query>Select s from Service s where s.etat=:etat</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Service.findByOffreService">
+            <jpa:query>Select s from Service s where s.offreService=:offreService</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="NatureServicePK" abs="false" class="NatureService" visibile="true" minimized="false" rootElement="_15796142026621" id="_1580156245090">
+        <jpa:ts e="true"/>
+        <jpa:hc e="true"/>
+        <jpa:eq e="true"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="description" id="_158015627258232">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_158015624509030">
+                <jpa:bv/>
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="NatureService.findAll">
+            <jpa:query>Select e from NatureService e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="NatureService.findByDescription">
+            <jpa:query>Select n from NatureService n where n.description=:description</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="NotificationPK" abs="false" class="Notification" visibile="true" minimized="false" rootElement="_15796142026621" id="_1581946711719">
+        <jpa:ts e="true"/>
+        <jpa:hc e="true"/>
+        <jpa:eq e="true"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" visibile="true" name="message" id="_158194673758117">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="boolean" visibile="true" name="estLu" id="_158194673806418">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" visibile="true" name="dateNotif" id="_1582194978727145">
+                <jpa:bv/>
+                <jpa:temporal>DATE</jpa:temporal>
+            </jpa:basic>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1579614249078" visibile="true" name="emetteur" id="_158197353655755"/>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1579614249078" connected-attribute-id="_1582203819884161" visibile="true" name="recepteur" id="_1582203819884160"/>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1579614407345" connected-attribute-id="_1582482627141179" visibile="true" name="service" id="_1582482627141178"/>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_158194671172115">
+                <jpa:bv/>
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Notification.findAll">
+            <jpa:query>Select e from Notification e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Notification.findByMessage">
+            <jpa:query>Select n from Notification n where n.message=:message</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Notification.findByEstLu">
+            <jpa:query>Select n from Notification n where n.estLu=:estLu</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Notification.findByAttribute3">
+            <jpa:query>Select n from Notification n where n.attribute3=:attribute3</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Notification.findByAttribute4">
+            <jpa:query>Select n from Notification n where n.attribute4=:attribute4</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Notification.findByDateNotif">
+            <jpa:query>Select n from Notification n where n.dateNotif=:dateNotif</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:snp e="true" loc="BEFORE_PACKAGE">/**
+ * This file was generated by the JPA Modeler
+ */</jpa:snp>
+    <jpa:c>
+        <ct>java.util.List</ct>
+        <ct>java.util.Set</ct>
+        <ct>java.util.Map</ct>
+        <ct>java.util.Collection</ct>
+    </jpa:c>
+    <jpa:diagram>
+        <plane elementRef="_15796142026621">
+            <shape elementRef="_1579614249078">
+                <Bounds x="544.0" y="-39.0" width="154.0" height="378.0"/>
+            </shape>
+            <shape elementRef="_1579614407345">
+                <Bounds x="50.0" y="4.0" width="151.0" height="336.0"/>
+            </shape>
+            <shape elementRef="_1580156245090">
+                <Bounds x="296.0" y="4.0" width="177.0" height="92.0"/>
+            </shape>
+            <shape elementRef="_1581946711719">
+                <Bounds x="296.0" y="312.0" width="160.0" height="210.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>
